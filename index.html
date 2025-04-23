@@ -1,83 +1,262 @@
 
-
-    Home
-    HTML
-    HTML Introduction
-    Tryit: HTML introduction 
-
-Result Size: 660 x 520
-
-​
-
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Royal Caribbean® Help Desk - Get 24/7 assistance for your cruise bookings, onboard services, and travel queries. Call our dedicated support at 1-888-230-8925 for immediate help.">
-
     <title>Royal Caribbean® Help Desk | 24/7 Cruise Support 1-888-230-8925</title>
-
     <style>
-
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
         
-
         * {
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
             font-family: 'Montserrat', sans-serif;
-
         }
-
         
-
         body {
-
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.royalcaribbean.com/content/dam/royal/resources/decks/rci-decks-ov-symphony-of-the-seas-1200x800.jpg');
-
             background-size: cover;
-
             background-position: center;
-
             background-attachment: fixed;
-
             color: #fff;
-
             min-height: 100vh;
-
         }
-
         
-
         .container {
-
             max-width: 1200px;
-
             margin: 0 auto;
-
             padding: 20px;
-
         }
-
         
-
         header {
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
+            padding: 20px 0;
+            border-bottom: 2px solid #00a0e8;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            color: #00a0e8;
+        }
+        
+        .logo span {
+            font-size: 12px;
+            vertical-align: super;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .phone-box {
+            background: rgba(0, 160, 232, 0.2);
+            border: 2px solid #00a0e8;
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+        
+        .phone-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-number:hover {
+            color: #00a0e8;
+            transform: scale(1.05);
+        }
+        
+        .content-section {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .content-section h3 {
+            color: #00a0e8;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card h4 {
+            color: #00a0e8;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: rgba(0, 0, 0, 0.7);
+            margin-top: 50px;
+        }
+        
+        footer p {
+            font-size: 14px;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 160, 232, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(0, 160, 232, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 160, 232, 0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .service-card {
+                width: 100%;
+            }
+            
+            .phone-number {
+                font-size: 28px;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="" alt="">
+                <h1>Royal Caribbean<span>®</span> Help Desk</h1>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <h2>24/7 Cruise Vacation Support</h2>
+            <p>Your journey begins with exceptional service. Our dedicated help desk is available round the clock to assist with all your cruise needs.</p>
+            
+            <div class="phone-box">
+                <a href="tel:18882308925" class="phone-number">1-888-230-8925</a>
+            </div>
+            
+            <p>Call now for immediate assistance with bookings, onboard services, and travel inquiries.</p>
+        </section>
+        
+        <div class="content-section">
+            <h3>Welcome to Royal Caribbean<sup>®</sup> Help Desk</h3>
+            <p>At Royal Caribbean International<sup>™</sup>, we understand that planning a cruise vacation should be as relaxing as the vacation itself. Our Help Desk is staffed with knowledgeable professionals ready to assist you with every aspect of your cruise experience.</p>
+            
+            <p>Whether you're booking your first cruise or you're a seasoned Crown & Anchor<sup>®</sup> Society member, our team is here to ensure your journey is seamless from start to finish. We offer support for reservations, itinerary changes, special accommodations, onboard activities, and any other questions you may have about your Royal Caribbean<sup>®</sup> adventure.</p>
+            
+            <p>Our Help Desk operates 24 hours a day, 7 days a week, because we know travel questions don't always happen during business hours. With just one call to 1-888-230-8925, you'll be connected with a cruise specialist who can provide personalized assistance tailored to your specific needs.</p>
+            
+            <p>Royal Caribbean International<sup>™</sup> takes pride in offering world-class service both on our ships and through our support channels. When you call our Help Desk, you're not just getting answers - you're getting peace of mind knowing that your cruise vacation is in the hands of experts who care about making your experience extraordinary.</p>
+            
+            <p>From technical support with our Royal Caribbean app to last-minute booking changes, dietary restrictions, or accessibility needs, no request is too big or small for our dedicated team. We're here to turn your cruise dreams into reality, one call at a time.</p>
+        </div>
+        
+        <div class="services">
+            <div class="service-card">
+                <h4>Booking Assistance</h4>
+                <p>Get help with new reservations, modifications, cancellations, and special offers for your Royal Caribbean<sup>®</sup> cruise.</p>
+            </div>
+            
+            <div class="service-card">
+                <h4>Onboard Services</h4>
+                <p>Information about dining options, entertainment, excursions, and amenities available on your upcoming cruise.</p>
+            </div>
+            
+            <div class="service-card">
+                <h4>Technical Support</h4>
+                <p>Assistance with the Royal Caribbean app, online check-in, WiFi packages, and other digital services.</p>
+            </div>
+            
+            <div class="service-card">
+                <h4>Special Needs</h4>
+                <p>Support for guests with disabilities, dietary restrictions, medical requirements, or other special requests.</p>
+            </div>
+            
+            <div class="service-card">
+                <h4>Loyalty Program</h4>
+                <p>Questions about Crown & Anchor<sup>®</sup> Society benefits, points, and member-exclusive offers.</p>
+            </div>
+            
+            <div class="service-card">
+                <h4>Emergency Support</h4>
+                <p>Immediate assistance for urgent travel changes or emergencies related to your cruise.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Royal Caribbean International<sup>™</sup> Help Desk | 24/7 Support: <a href="tel:18882308925" style="color: #00a0e8;">1-888-230-8925</a></p>
+        <p>© 2025 Royal Caribbean Cruises Ltd. Ships' registry: The Bahamas. All rights reserved.</p>
+    </footer>
+</body>
+</html>
